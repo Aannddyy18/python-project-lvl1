@@ -2,7 +2,7 @@ name: make-lint
 on: push
 jobs:
   my-job:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Install dependencies
         run: |
@@ -10,5 +10,7 @@ jobs:
           make install
       - name: install flake8
         run: poetry add --dev flake8
+      - name: Check out repository code
+        uses: actions/checkout@v2
       - name: my-step
         run: make lint
