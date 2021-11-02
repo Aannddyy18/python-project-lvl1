@@ -1,16 +1,21 @@
 name: make-lint
-on: push
+
+on:
+  - push
+
 jobs:
-  my-job:
+  build:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
       - name: Install dependencies
         run: |
           pip install poetry
           make install
       - name: install flake8
-        run: poetry add --dev flake8
-      - name: Check out repository code
-        uses: actions/checkout@v2
-      - name: my-step
-        run: make lint
+        run: |
+          poetry add --dev flake8
+      - name: Run linter
+        run: |
+          make lint
