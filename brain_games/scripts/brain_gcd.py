@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
- 
 """Greatest common divisor game."""
 
 

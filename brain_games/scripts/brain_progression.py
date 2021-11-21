@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
- 
 """Finding missed number in progression."""
 
 

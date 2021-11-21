@@ -1,5 +1,4 @@
 """Search for missed number in the progression."""
- 
 from random import randint
 from random import choice
 

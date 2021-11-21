@@ -17,7 +17,8 @@ def play_with_user(game):
             if i == 3:
                 print('Congratulations, {a}!'.format(a=name))
         else:
-            print('\'{a}\' is wrong answer ;(. Correct answer was \'{b}\'.'.format(a=answer, b=result))
+            print('\'{a}\' is wrong answer ;(.'
+                  ' Correct answer was \'{b}\'.'.format(a=answer, b=result))
             print('Let\'s try again, {a}!'.format(a=name))
             break
         i += 1

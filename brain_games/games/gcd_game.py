@@ -1,5 +1,4 @@
 """Search for greatest common divisor of given numbers."""
- 
 from random import randint
 from math import gcd
 
