@@ -16,8 +16,7 @@ def play_with_user():
         print('Question: {a}'.format(a=number))
         answer = prompt.secret('')
         print('Your answer: {a}'.format(a=answer))
-        if ((answer == 'yes' and number % 2 == 0)
-                or (answer == 'no' and number % 2 == 1)):
+        if ((answer == 'yes' and number % 2 == 0) or (answer == 'no' and number % 2 == 1)):
             print('Correct!')
             if i == 3:
                 print('Congratulations, {a}!'.format(a=name))
