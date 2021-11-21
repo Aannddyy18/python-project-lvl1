@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
- 
+
 """Calculator game."""
 
 
 from brain_games.games_engine import play_with_user
-import brain_games.games.calc
+from brain_games.games import calc
 
 
 def greet():
@@ -13,7 +13,7 @@ def greet():
 
 def main():
     greet()
-    play_with_user(brain_games.games.calc)
+    play_with_user(calc)
 
 
 if __name__ == '__main__':

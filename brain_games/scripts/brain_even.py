@@ -4,7 +4,7 @@
 
 
 from brain_games.games_engine import play_with_user
-import brain_games.games.even
+from brain_games.games import even
 
 
 def greet():
@@ -13,7 +13,7 @@ def greet():
 
 def main():
     greet()
-    play_with_user(brain_games.games.even)
+    play_with_user(even)
 
 
 if __name__ == '__main__':
