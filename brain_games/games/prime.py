@@ -11,7 +11,7 @@ def main_question():
 def game_question():
     """Let's play."""
     number = randint(1, 99)
-    print('Question: {a}'.format(a=number))
+    print('{a}'.format(a=number))
     if IsPrime(number):
         return 'yes'
     else:

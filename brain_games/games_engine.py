@@ -5,11 +5,13 @@ import prompt
 
 def play_with_user(game):
     """Conversation."""
+    print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print('Hello, {a}!'.format(a=name))
     game.main_question()
     i = 1
     while i < 4:
+        print('Question:', end=" ")
         result = game.game_question()
         answer = prompt.string('Your answer: ')
         if (str(result) == answer):

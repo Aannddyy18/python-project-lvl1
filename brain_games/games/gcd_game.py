@@ -13,5 +13,5 @@ def game_question():
     number_one = randint(1, 99)
     number_two = randint(1, 99)
     nod = gcd(number_one, number_two)
-    print('Question: {a} {b}'.format(a=number_one, b=number_two))
+    print('{a} {b}'.format(a=number_one, b=number_two))
     return nod

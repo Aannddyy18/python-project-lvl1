@@ -14,7 +14,7 @@ def game_question():
     number_one = randint(1, 99)
     number_two = randint(1, 99)
     sign = choice('+-*')
-    print('Question: {a} {b} {c}'.format(a=number_one, b=sign, c=number_two))
+    print('{a} {b} {c}'.format(a=number_one, b=sign, c=number_two))
     if sign == '+':
         result = number_one + number_two
     elif sign == '-':

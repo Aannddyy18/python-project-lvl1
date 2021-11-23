@@ -2,7 +2,7 @@
 [![Actions Status](https://github.com/Aannddyy18/python-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Aannddyy18/python-project-lvl1/actions)
 
 ### Codeclimate
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/d46daa8d21fca191ae53/maintainability)](https://codeclimate.com/github/Aannddyy18/python-project-lvl1/maintainability)
 
 First level project on hexlet education
 =======================================

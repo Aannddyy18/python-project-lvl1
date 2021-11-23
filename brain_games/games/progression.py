@@ -14,7 +14,6 @@ def game_question():
     step = randint(1, 3)
     progr = range(start, 16, step)
     hidden = choice(progr)
-    print('Question:', end=" ")
     print_progr(progr, hidden)
     return hidden
 
