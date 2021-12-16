@@ -6,10 +6,10 @@ from random import choice
 def game_question():
     """Let's calculate."""
     rule = ('What number is missing in the progression?')
-    start_of_progression = randint(1, 3)
-    step_of_progression = randint(1, 3)
-    end_of_progression = 16
-    progression = range(start_of_progression, end_of_progression, step_of_progression)
+    start_progression = randint(1, 3)
+    step_progression = randint(1, 3)
+    end_progression = 16
+    progression = range(start_progression, end_progression, step_progression)
     hidden = choice(progression)
     task = task_progression(progression, hidden)
     return (rule, task, hidden)

@@ -10,7 +10,7 @@ def game_question():
     task = ('{a}'.format(a=number))
     result = ""
     if is_prime(number):
-        result =  'yes'
+        result = 'yes'
     else:
         result = 'no'
     return (rule, task, result)
