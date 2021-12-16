@@ -8,11 +8,11 @@ def play_with_user(game):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print('Hello, {a}!'.format(a=name))
-    game.main_question()
     i = 1
     while i < 4:
-        print('Question:', end=" ")
-        result = game.game_question()
+        (game_rules, task, result) = game.game_question()
+        print(game_rules)
+        print('Question:', task)
         answer = prompt.string('Your answer: ')
         if (str(result) == answer):
             print('Correct!')

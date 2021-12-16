@@ -3,22 +3,20 @@
 from random import randint
 
 
-def main_question():
-    """Question."""
-    print('Answer \"yes\" if given number is prime. Otherwise answer \"no\".')
-
-
 def game_question():
     """Let's play."""
+    rule = ('Answer \"yes\" if given number is prime. Otherwise answer \"no\".')
     number = randint(1, 99)
-    print('{a}'.format(a=number))
-    if IsPrime(number):
-        return 'yes'
+    task = ('{a}'.format(a=number))
+    result = ""
+    if is_prime(number):
+        result =  'yes'
     else:
-        return 'no'
+        result = 'no'
+    return (rule, task, result)
 
 
-def IsPrime(n):
+def is_prime(n):
     """Check if number is prime."""
     d = 2
     while n % d != 0:

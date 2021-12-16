@@ -7,7 +7,7 @@ from brain_games.games import gcd_game
 
 
 def main():
-    play_with_user(gcd_game)
+    play_with_user(gcd)
 
 
 if __name__ == '__main__':

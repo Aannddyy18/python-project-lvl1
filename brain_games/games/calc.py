@@ -4,21 +4,17 @@ from random import randint
 from random import choice
 
 
-def main_question():
-    """Question."""
-    print('What is the result of the expression?')
-
-
 def game_question():
     """Let's calculate."""
-    number_one = randint(1, 99)
-    number_two = randint(1, 99)
+    game_rules = 'What is the result of the expression?'
+    first_number = randint(1, 99)
+    second_number = randint(1, 99)
     sign = choice('+-*')
-    print('{a} {b} {c}'.format(a=number_one, b=sign, c=number_two))
+    task = ('{a} {b} {c}'.format(a=first_number, b=sign, c=second_number))
     if sign == '+':
-        result = number_one + number_two
+        result = first_number + second_number
     elif sign == '-':
-        result = number_one - number_two
+        result = first_number - second_number
     else:
-        result = number_one * number_two
-    return result
+        result = first_number * second_number
+    return (game_rules, task, result)

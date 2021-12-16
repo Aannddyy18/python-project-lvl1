@@ -3,28 +3,26 @@ from random import randint
 from random import choice
 
 
-def main_question():
-    """Question."""
-    print('What number is missing in the progression?')
-
-
 def game_question():
     """Let's calculate."""
-    start = randint(1, 3)
-    step = randint(1, 3)
-    progr = range(start, 16, step)
-    hidden = choice(progr)
-    print_progr(progr, hidden)
-    return hidden
+    rule = ('What number is missing in the progression?')
+    start_of_progression = randint(1, 3)
+    step_of_progression = randint(1, 3)
+    end_of_progression = 16
+    progression = range(start_of_progression, end_of_progression, step_of_progression)
+    hidden = choice(progression)
+    task = task_progression(progression, hidden)
+    return (rule, task, hidden)
 
 
-def print_progr(progress, randomnumber):
-    """Print progression."""
+def task_progression(progression, number):
+    """Forming progression."""
     i = 0
-    for num in progress:
-        if (progress[i] == randomnumber):
-            print('..', end=" ")
+    s = ""
+    for num in progression:
+        if (progression[i] == number):
+            s = s + ('..') + (" ")
         else:
-            print(progress[i], end=" ")
+            s = s + str(progression[i]) + (" ")
         i += 1
-    print()
+    return s
