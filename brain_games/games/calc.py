@@ -4,11 +4,15 @@ from random import randint
 from random import choice
 
 
-def game_question():
+RULE = 'What is the result of the expression?'
+
+
+def calculate():
     """Let's calculate."""
-    game_rules = 'What is the result of the expression?'
-    first_number = randint(1, 99)
-    second_number = randint(1, 99)
+    MIN_NUMBER = 1
+    MAX_NUMBER = 99
+    first_number = randint(MIN_NUMBER, MAX_NUMBER)
+    second_number = randint(MIN_NUMBER, MAX_NUMBER)
     sign = choice('+-*')
     task = ('{a} {b} {c}'.format(a=first_number, b=sign, c=second_number))
     if sign == '+':
@@ -17,4 +21,4 @@ def game_question():
         result = first_number - second_number
     else:
         result = first_number * second_number
-    return (game_rules, task, result)
+    return task, result

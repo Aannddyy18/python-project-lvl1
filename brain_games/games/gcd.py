@@ -3,11 +3,15 @@ from random import randint
 from math import gcd
 
 
-def game_question():
+RULE = 'Find the greatest common divisor of given numbers.'
+
+
+def calculate():
     """Let's calculate."""
-    rule = ('Find the greatest common divisor of given numbers.')
-    first_number = randint(1, 99)
-    second_number = randint(1, 99)
-    nod = gcd(first_number, second_number)
+    MIN_NUMBER = 1
+    MAX_NUMBER = 99
+    first_number = randint(MIN_NUMBER, MAX_NUMBER)
+    second_number = randint(MIN_NUMBER, MAX_NUMBER)
+    gr_divisor = gcd(first_number, second_number)
     task = ('{a} {b}'.format(a=first_number, b=second_number))
-    return (rule, task, nod)
+    return task, gr_divisor
