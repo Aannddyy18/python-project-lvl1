@@ -4,15 +4,14 @@ from random import randint
 
 
 RULE = 'Answer \"yes\" if given number is prime. Otherwise answer \"no\".'
+MIN_NUMBER = 1
+MAX_NUMBER = 99
 
 
-def calculate():
+def form_task_and_answer():
     """Let's play."""
-    MIN_NUMBER = 1
-    MAX_NUMBER = 99
     number = randint(MIN_NUMBER, MAX_NUMBER)
     task = ('{a}'.format(a=number))
-    result = ""
     if is_prime(number):
         result = 'yes'
     else:

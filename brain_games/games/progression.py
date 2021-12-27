@@ -3,31 +3,31 @@ from random import randint
 
 
 RULE = 'What number is missing in the progression?'
+MIN_START = 1
+MAX_START = 3
+MIN_STEP = 1
+MAX_STEP = 3
+QUANTITY_ELEM = 15
 
 
-def calculate():
+def form_task_and_answer():
     """Let's calculate."""
-    MIN_START = 1
-    MAX_START = 3
-    start_progression = randint(MIN_START, MAX_START)
-    MIN_STEP = 1
-    MAX_STEP = 3
-    step_progression = randint(MIN_STEP, MAX_STEP)
-    END_PROGRESSION = 16
-    progression = range(start_progression, END_PROGRESSION, step_progression)
-    hidden_index = randint(0, len(progression) - 1)
-    hidden = progression[hidden_index]
-    task = make_progression(progression, hidden_index)
+    progression, hidden_index, hidden = form_progression()
+    task = stringify_progression(progression, hidden_index)
     return task, hidden
 
 
-def make_progression(progression, hidden_index):
+def form_progression():
+    start_progression = randint(MIN_START, MAX_START)
+    step_progression = randint(MIN_STEP, MAX_STEP)
+    progression = range(start_progression, QUANTITY_ELEM + 1, step_progression)
+    hidden_index = randint(0, len(progression) - 1)
+    hidden = progression[hidden_index]
+    return progression, hidden_index, hidden
+
+
+def stringify_progression(progression, hidden_index):
     """Forming progression."""
     progression = list(progression)
-    for (i, elem) in enumerate(progression):
-        if progression[i] == progression[hidden_index]:
-            progression[hidden_index] = '..'
-        else:
-            progression[i] = str(elem)
-    s = ' '.join(progression)
-    return s
+    return " ".join(str(s) if i != hidden_index else ".." for i,
+                    s in enumerate(progression))

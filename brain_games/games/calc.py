@@ -5,12 +5,12 @@ from random import choice
 
 
 RULE = 'What is the result of the expression?'
+MIN_NUMBER = 1
+MAX_NUMBER = 99
 
 
-def calculate():
+def form_task_and_answer():
     """Let's calculate."""
-    MIN_NUMBER = 1
-    MAX_NUMBER = 99
     first_number = randint(MIN_NUMBER, MAX_NUMBER)
     second_number = randint(MIN_NUMBER, MAX_NUMBER)
     sign = choice('+-*')
